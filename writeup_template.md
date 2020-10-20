@@ -34,20 +34,11 @@ Based on the point and slope, the line is exprapolated based on the range of y c
 
 The result for a example image is shown below:
 
-![alt text][image_in]
 ![alt text][image_out]
 
+Red lines are the created lane lines by my pipeline. Please refer to the Jupyter file for details of description and python codes.
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Suggest possible improvements to my pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
-
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+A fluctuating effect is often detected in the result video. It can be improved by fine tunning. However, the tunning parameters can be differ on another evironments.
+Changing parameters adaptively with deep learning model can be possible improvements.
