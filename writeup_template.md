@@ -1,9 +1,4 @@
 # **Finding Lane Lines on the Road** 
-
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -16,21 +11,31 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image_in]: ./test_images/solidWhiteRight.jpg "Input image"
+[image_out]: ./test_images_output/solidWhiteRight.jpg "Output image"
 
 ---
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Description of pipeline.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps. 
+* Input image is converted into gray scale image, and filtered with Gaussian smoothing.
+* Detection canny edges with proper low and high thresholds.
+* Masked edge image is created baseed on four vertices that we are interested in.
+* Creating line image that includes all of lines calculated by Hough transform.
+* Draw a single line on the left and right lanes by averaging and extrapolation.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function.
+The left and right line is decided by the sign of slope of the line.
+x and y points are sumed up and the average of points and slope are calulated.
+Based on the point and slope, the line is exprapolated based on the range of y coordinate.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+The result for a example image is shown below:
 
-![alt text][image1]
+![alt text][image_in]
+![alt text][image_out]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
