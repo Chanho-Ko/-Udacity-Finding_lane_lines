@@ -10,7 +10,8 @@
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+* Apply a pipeline for the video
+* Modify the draw_lines() function for creating a single line of right and left lane
 
 
 [//]: # (Image References)
